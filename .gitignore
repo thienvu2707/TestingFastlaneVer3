@@ -8,6 +8,9 @@
 *.crt
 *.cer
 *.priv
+*.mobileprovision
+*.p12
+*.certSigningRequest
 
 ### fastlane ###
 # fastlane - A streamlined workflow tool for Cocoa deployment
