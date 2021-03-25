@@ -33,7 +33,7 @@ lane :cleanAndBuild do
 #ensure_git_branch
 version = increasePatchNumber
 clear_derived_data
-gym(scheme: "TestingFastlaneVer2")
+gym(scheme: "TestingFastlaneVer3")
 end
 
 lane :increasePatchNumber do
