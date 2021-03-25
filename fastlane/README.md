@@ -26,6 +26,26 @@ Push a new beta build to TestFlight
 fastlane ios getCodeSigning
 ```
 
+### ios cleanAndBuild
+```
+fastlane ios cleanAndBuild
+```
+
+### ios increasePatchNumber
+```
+fastlane ios increasePatchNumber
+```
+
+### ios increaseMinorNumber
+```
+fastlane ios increaseMinorNumber
+```
+
+### ios increaseMajorNumber
+```
+fastlane ios increaseMajorNumber
+```
+
 
 ----
 

@@ -30,7 +30,7 @@ lane :getCodeSigning do
   build_app
 end
 lane :cleanAndBuild do
-ensure_git_branch
+#ensure_git_branch
 version = increasePatchNumber
 clear_derived_data
 gym(scheme: "TestingFastlaneVer2")
