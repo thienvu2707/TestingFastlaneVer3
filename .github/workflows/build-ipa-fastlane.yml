@@ -26,4 +26,3 @@ jobs:
             
     - name: Run clean and build 
       run: fastlane cleanAndBuild
-        bundle exec fastlane tests
