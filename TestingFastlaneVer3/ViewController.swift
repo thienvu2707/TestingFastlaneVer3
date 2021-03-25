@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func actionNextViewButton(_ sender: Any) {
+        print("Bye World")
         let vc = storyboard?.instantiateViewController(identifier: "SecondViewController") as! SecondViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
