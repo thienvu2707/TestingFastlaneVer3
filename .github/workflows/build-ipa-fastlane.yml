@@ -25,10 +25,5 @@ jobs:
         bundler-cache: true
             
     - name: Fastlane Action
-  # You may pin to the exact commit or the version.
-  # uses: maierj/fastlane-action@2121d31315dd0054a407c2c24938ae1fa29b883d
-  uses: maierj/fastlane-action@v2.0.1
-  with:
-    # The lane that should be executed.
-    lane: cleanAndBuild
+      run: fastlane snapshot
     
