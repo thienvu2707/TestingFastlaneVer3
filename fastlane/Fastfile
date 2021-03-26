@@ -32,6 +32,9 @@ end
 
 lane :cleanAndBuild do
 	#ensure_git_branch
+enable_automatic_code_signing(
+  path: "/Users/thienvule/XCode/TestingFastlaneVer3/TestingFastlaneVer3.xcodeproj"
+)
 	version = increasePatchNumber
 	clear_derived_data
 	gym(scheme: "TestingFastlaneVer3")
