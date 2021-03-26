@@ -24,10 +24,10 @@ jobs:
         ruby-version: 2.7.2
         bundler-cache: true
         
-    - name: Fastlane Action
+    - name: Fastlane Clean And Build
       uses: maierj/fastlane-action@v2.0.1
       with:
-        lane: 'beta'
+        lane: 'cleanAndBuild'
       
     - name: Fastlane snapshot
       run: fastlane snapshot
