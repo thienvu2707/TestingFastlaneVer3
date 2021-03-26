@@ -26,6 +26,8 @@ jobs:
         
     - name: Fastlane Action
       uses: maierj/fastlane-action@v2.0.1
+      with:
+        lane: beta
       
     - name: Fastlane snapshot
       run: fastlane snapshot
