@@ -29,11 +29,13 @@ lane :getCodeSigning do
   get_provisioning_profile   # invokes sigh
   build_app
 end
-lane :cleanAndBuild do=
-#ensure_git_branch
-version = increasePatchNumber
-clear_derived_data
-gym(scheme: "TestingFastlaneVer3")
+
+lane :cleanAndBuild do
+	#ensure_git_branch
+	version = increasePatchNumber
+	clear_derived_data
+	gym(scheme: "TestingFastlaneVer3")
+end
 
 lane :increasePatchNumber do
 increment_version_number(
