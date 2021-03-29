@@ -32,7 +32,8 @@ end
 
 lane :cleanAndBuild do
 	#ensure_git_branch
-	version = increasePatchNumber
+	#version = increasePatchNumber
+	match(type: "development")
 	clear_derived_data
 	gym(scheme: "TestingFastlaneVer3")
 end
