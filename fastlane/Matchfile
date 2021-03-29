@@ -6,8 +6,8 @@ type("development") # The default type, can be: appstore, adhoc, enterprise or d
 
 app_identifier("com.gumiviet.TestingFastlaneVer3")
 username("haonguyen@gumiviet.com") # Your Apple Developer Portal username
-shallow_clone true
-force_for_new_devices true
+#shallow_clone true
+#force_for_new_devices true
 ENV["FASTLANE_PASSWORD"] = "Gumiviet7393" #Password to access git repo.
 
 # The docs are available on https://docs.fastlane.tools/actions/match
