@@ -23,6 +23,15 @@ jobs:
       with:
         ruby-version: 2.7.2
         bundler-cache: true
-            
-    - name: Run clean and build 
-      run: fastlane cleanAndBuild
+        
+    - name: Fastlane Clean And Build
+      env: 
+        APPLE_ACCOUNT: ${{ secrets.APPLE_ACCOUNT }}
+        APPLE_PASSWORD: ${{ secrets.APPLE_PASSWORD }}
+      uses: maierj/fastlane-action@v2.0.1
+      with:
+        lane: 'cleanAndBuild'
+      
+    - name: Fastlane snapshot
+      run: fastlane snapshot
+    
