@@ -16,6 +16,12 @@
 default_platform(:ios)
 
 platform :ios do
+
+  desc "Run tests"
+    lane :test do
+        run_tests(scheme: "TestingFastlaneVer3")
+    end
+
   desc "Push a new beta build to TestFlight"
   lane :beta do
     cert
@@ -29,11 +35,15 @@ lane :getCodeSigning do
   get_provisioning_profile   # invokes sigh
   build_app
 end
+
 lane :cleanAndBuild do
-ensure_git_branch
-version = increasePatchNumber
-clear_derived_data
-gym(scheme: "TestingFastlaneVer2")
+	#ensure_git_branch
+	#version = increasePatchNumber
+	match(type: "development")
+	FASTLANE_PASSWORD = "Gumiviet7393"
+	sync_code_signing(type: "development")
+	clear_derived_data
+	gym(scheme: "TestingFastlaneVer3")
 end
 
 lane :increasePatchNumber do
