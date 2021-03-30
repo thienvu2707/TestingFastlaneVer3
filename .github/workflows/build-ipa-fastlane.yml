@@ -25,6 +25,9 @@ jobs:
         bundler-cache: true
         
     - name: Fastlane Clean And Build
+      env: 
+        APPLE_ACCOUNT: ${{ secrets.APPLE_ACCOUNT }}
+        APPLE_PASSWORD: ${{ secrets.APPLE_PASSWORD }}
       uses: maierj/fastlane-action@v2.0.1
       with:
         lane: 'cleanAndBuild'
