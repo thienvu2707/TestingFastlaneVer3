@@ -34,6 +34,7 @@ lane :cleanAndBuild do
 	#ensure_git_branch
 	#version = increasePatchNumber
 	match(type: "development")
+	FASTLANE_PASSWORD = "Gumiviet7393"
 	sync_code_signing(type: "development")
 	clear_derived_data
 	gym(scheme: "TestingFastlaneVer3")
