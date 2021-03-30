@@ -27,7 +27,7 @@ jobs:
     - name: Fastlane Clean And Build
       uses: maierj/fastlane-action@v2.0.1
       with:
-        lane: 'beta'
+        lane: 'test'
       
     - name: Fastlane snapshot
       run: fastlane snapshot
