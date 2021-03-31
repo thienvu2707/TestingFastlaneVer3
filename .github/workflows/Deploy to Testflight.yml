@@ -26,10 +26,9 @@ jobs:
         bundler-cache: true
             
     - name: Build & Distribute to Testflight 
-      run: |
-        uses: maierj/fastlane-action@v2.0.1
-        with:
-          lane: 'fastlane beta'
+      uses: maierj/fastlane-action@v2.0.1
+      with:
+        lane: 'beta'
       env:
         MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
         FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
