@@ -1,7 +1,11 @@
 name: Deploy to Testflight 
 on:
+  release:
+    types: [ created ]
   push:
     branches: [ release ]
+  pull_request:
+    branches: [ develop ]
 jobs:
   deploy:
     name: Deploy
