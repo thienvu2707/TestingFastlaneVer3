@@ -27,8 +27,6 @@ jobs:
             
     - name: Build & Distribute to Testflight 
       run: |
-        export LC_ALL=en_US.UTF-8
-        export LANG=en_US.UTF-8
         uses: maierj/fastlane-action@v2.0.1
         with:
           lane: 'fastlane beta'
