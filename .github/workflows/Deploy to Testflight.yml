@@ -24,6 +24,16 @@ jobs:
       with:
         ruby-version: 2.7.2
         bundler-cache: true
+        
+    - name: App Store Connect API
+      uses: yuki0n0/action-appstoreconnect-token@v1.0
+      with:
+        # UUID. Can get from App Store Connect.
+        issuer id: e04a730a-511d-42b8-b08f-8783bfa57546
+        # Key ID. Can get from App Store Connect.
+        key id: L84V95726Q
+        # P8 private key. Can get from App Store Connect.
+        key: ${{ secrets.P8_PRIVATE_KEY }}
             
     - name: Build & Distribute to Testflight 
       uses: maierj/fastlane-action@v2.0.1
