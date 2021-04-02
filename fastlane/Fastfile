@@ -24,8 +24,8 @@ platform :ios do
 
   desc "Push a new beta build to TestFlight"
   lane :beta do
-    cert
-    sigh(force: true)
+    match(type: "development")
+    sync_code_signing(type: "development")
     build_app(scheme: "TestingFastlaneVer3")
     upload_to_testflight
   end
